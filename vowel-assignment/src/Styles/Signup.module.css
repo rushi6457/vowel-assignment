@@ -1,0 +1,17 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&family=Open+Sans:wght@500&family=Orelega+One&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&family=Secular+One&family=Source+Sans+Pro:ital,wght@1,600&display=swap'); */
+
+
+.signupPage{
+    /* height: 100vh; */
+    /* border: 1px solid; */
+    width: 30%;
+    margin: auto;
+    margin-top: 5%;
+}
+.signupPageContainer{
+    height: 60vh;
+    padding-top: 10%;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5%;
+}

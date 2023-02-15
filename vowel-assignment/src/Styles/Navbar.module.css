@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    /* position: fixed; */
+    width: 100%;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.navbar img{
+    width: 200px;
+}
+.rightSideFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.rightSideFlex li{
+    font-size: 1.4rem;
+    list-style: none;
+}
+.rightSideFlex button{
+    text-transform: uppercase;
+}

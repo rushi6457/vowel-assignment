@@ -1,0 +1,15 @@
+.loginPage{
+    /* height: 100vh; */
+    /* border: 1px solid; */
+    width: 30%;
+    margin: auto;
+    margin-top: 5%;
+    
+}
+.loginPageContainer{
+    height: 60vh;
+    padding-top: 10%;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5%;
+}
