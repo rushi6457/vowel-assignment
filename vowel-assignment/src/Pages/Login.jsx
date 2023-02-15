@@ -12,7 +12,7 @@ const Login = () => {
     })
     const navigate = useNavigate()
     const store = useSelector(store =>store)
-   
+    
     const dispatch = useDispatch()
     const handleChange = (e) =>{
     const {name,value} = e.target;
@@ -33,6 +33,9 @@ const handleSubmit = (e) =>{
     e.preventDefault();
     dispatch(login(user))
 }
+    if(store.auth.isLoading){
+        return <Heading>Loading...</Heading>
+    }
     return (
         <Box className={styles.loginPage}>
             <form onSubmit={handleSubmit}>
