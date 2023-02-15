@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-## For Admin Login use "@vowel.com"  
+## For Admin Signup and Login include "@vowel.com" in email id  
 
 ## Available Scripts
 
