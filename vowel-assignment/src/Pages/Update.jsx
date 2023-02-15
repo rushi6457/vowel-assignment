@@ -29,7 +29,7 @@ const Update = () => {
         let res = await axios.put(`https://vowel-assignment.onrender.com/update/${ref.id}`,data)
        toast.success("Product information updated successfully",toastOptions)
     }
-    console.log(data)
+    
     return (
         <Center border='1px solid grey' width='40%' padding='15px' margin='auto' mt='5%' borderRadius='20px'>
                <Container>

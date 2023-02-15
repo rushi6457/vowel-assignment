@@ -12,7 +12,7 @@ const Login = () => {
     })
     const navigate = useNavigate()
     const store = useSelector(store =>store)
-    console.log(store);
+   
     const dispatch = useDispatch()
     const handleChange = (e) =>{
     const {name,value} = e.target;

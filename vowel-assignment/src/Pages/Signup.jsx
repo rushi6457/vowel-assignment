@@ -36,7 +36,7 @@ const handleChange = (e) =>{
 const handleSubmit= async(e) =>{
     e.preventDefault()
      let res = await axios.post(`https://vowel-assignment.onrender.com/signup`,user)
-     console.log(res);
+    
     if(res.data.status === false){
         toast.error(res.data.message,toastOptions)
     }

@@ -26,7 +26,7 @@ const Admin = () => {
     const handleDelete= async(id) =>{
             
             await axios.delete(`http://localhost:5000/deleteProduct/${id}`)
-            toast.success("Product deleted successfully ")
+            toast.success("Product deleted successfully ",toastOptions)
             setData(data.filter((el)=>el.id !== id))
     }
     const handleUpdate = (id) =>{

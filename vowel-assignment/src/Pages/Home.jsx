@@ -13,7 +13,6 @@ const Home = () => {
     useEffect(()=>{
         getData()
     },[])
-    console.log(data)
     return (
         <div>
                 <Grid  templateColumns='repeat(4, 1fr)' gap='20px' padding='10'>
