@@ -9,7 +9,7 @@ const Admin = () => {
     let limit = 20;
     const navigate = useNavigate()
     const getData = async () =>{
-      let res = await axios.get(`http://localhost:5000/getproducts?limit=${limit}`)
+      let res = await axios.get(`https://vowel-assignment.onrender.com/getproducts?limit=${limit}`)
       setData(res.data.products)
 }
    const toastOptions = {

@@ -11,7 +11,7 @@ const SingleProductPage = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const getProduct = async() =>{
-        let res = await axios.get(`http://localhost:5000/getproduct/${ref.id}`)
+        let res = await axios.get(`https://vowel-assignment.onrender.com/getproduct/${ref.id}`)
         setProduct(res.data.product)
     }
     useEffect(()=>{

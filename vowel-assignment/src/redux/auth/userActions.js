@@ -5,7 +5,7 @@ export const login = (creds) => async (dispatch) =>{
 
     dispatch({type:LOGIN_REQUEST})
     try {
-        let res = await axios.post(`http://localhost:5000/login`,creds)
+        let res = await axios.post(`https://vowel-assignment.onrender.com/login`,creds)
         console.log(res.data);
         dispatch({type:LOGIN_SUCCESS,payload:res.data})
     } catch (error) {

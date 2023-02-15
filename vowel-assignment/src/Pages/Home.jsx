@@ -7,7 +7,7 @@ const Home = () => {
     let limit = 20;
 
     const getData = async () =>{
-      let res = await axios.get(`http://localhost:5000/getproducts?limit=${limit}`)
+      let res = await axios.get(`https://vowel-assignment.onrender.com/getproducts?limit=${limit}`)
       setData(res.data.products)
 }
     useEffect(()=>{

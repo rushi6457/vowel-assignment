@@ -26,7 +26,7 @@ const Update = () => {
             ...data,
             [name]:value
         })
-        let res = await axios.put(`http://localhost:5000/update/${ref.id}`,data)
+        let res = await axios.put(`https://vowel-assignment.onrender.com/update/${ref.id}`,data)
        toast.success("Product information updated successfully",toastOptions)
     }
     console.log(data)
