@@ -38,8 +38,18 @@ const DeleteCart = asyncHandler(async(req,res) =>{
     }
 })
 
+const UpdateCart = asyncHandler(async(req,res) =>{
+    const {id} = req.params;
+    let updateProduct = await CartModel.findByIdAndUpdate({_id:id})
+    if(updateProduct){
+        updateProduct.quantity = req.body.quantity
+        
+    }
+})
+
 module.exports = {
     AddToCart,
     CartData,
-    DeleteCart
+    DeleteCart,
+    UpdateCart
 }

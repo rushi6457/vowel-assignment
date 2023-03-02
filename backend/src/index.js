@@ -5,6 +5,7 @@ const cors = require('cors');
 const router = require('./routes/userRoute');
 const productRoute = require("./routes/productRoute")
 const cartRoute = require("./routes/cartRoute")
+const paymentRoute =  require("./routes/paymentRoute")
 require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -14,6 +15,7 @@ app.get("/",(req,res) =>res.send("HELLO"));
 app.use("/user",router)
 app.use("/admin",productRoute)
 app.use("/cart",cartRoute)
+app.use("/payment",paymentRoute)
 
 app.listen(process.env.PORT,async() =>{
     await connect()
