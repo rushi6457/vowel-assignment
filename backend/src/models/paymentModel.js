@@ -9,9 +9,16 @@ const PaymentSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    productId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Product"
+    },
     pincode:{
         type:Number,
         required:true
+    },
+    totalPrice:{
+        type:Number
     }
 },{
     timestamps:true
