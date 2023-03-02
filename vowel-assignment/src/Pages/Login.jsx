@@ -23,7 +23,7 @@ const Login = () => {
 }
 useEffect(()=>{
     if(store.auth.isAuth === true && store.auth.token.role === "User"){
-        navigate("/cart")
+        navigate(`/`)
     }
     else if(store.auth.isAuth === true && store.auth.token.role === "Admin"){
         navigate("/admin")

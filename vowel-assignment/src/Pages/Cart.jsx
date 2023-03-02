@@ -5,9 +5,12 @@ import {Box,Flex,Heading,Image,Button,Stack,Text,Center} from "@chakra-ui/react"
 import {addToCart} from "../redux/cart/cartActions.js"
 import { useDispatch,useSelector } from 'react-redux';
 const Cart = () => {
-    const [count,setCount] = useState(1)
+
     const {cart} = useSelector(cart=>cart.cart)
+    const user = useSelector(user => user.auth)
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+  
     return (
            <Center  border='1px solid' w='60%' margin='auto' marginTop='15%' padding='20px'>
             <Flex justifyContent='center' gap='50px' w='100%'>
@@ -21,11 +24,6 @@ const Cart = () => {
                                 fontSize='20px'
                                 fontWeight='bold'
                             >{`$${cart.price}`}</Text>
-                            <Flex>
-                                <Button fontSize='1rem'  onClick={()=>setCount(count+1)}>+</Button>
-                                <Button fontSize='1rem'>{count}</Button>
-                                <Button disabled={count === 1} fontSize='1rem' onClick={()=>setCount(count-1)}>-</Button>
-                            </Flex>
                         </Flex>
                         <Button onClick={()=>navigate("/payment")} marginTop='5%' variant='solid' colorScheme='red'>Proceed to payment</Button>
                     </Box>

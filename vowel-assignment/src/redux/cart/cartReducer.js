@@ -4,6 +4,7 @@ const initState = {
     isLoading:false,
     isError:false,
     cart:cartItem,
+ 
    
 }
 
@@ -25,7 +26,8 @@ export const cartReducer = (state=initState , {type,payload}) =>{
             ...state,
             isLoading:false,
             isError:false,
-            cart:payload
+            cart:payload,
+        
         }
     }
      case ADD_TO_CART_FAIL:{

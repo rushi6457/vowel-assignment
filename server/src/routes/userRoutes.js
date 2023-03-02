@@ -67,7 +67,7 @@ const validateUser = async (data) => {
 const Login = async (req, res) => {
   let { email, password } = req.body;
   let user = await validateUser({ email, password });
-    
+    let userId = user._id
       if(user && email.includes("@vowel.com")){
          if (user) {
            
@@ -84,14 +84,14 @@ const Login = async (req, res) => {
         process.env.REFRESH_TOKEN,
       { expiresIn: "7 days" }
     );
-     res.status(200).send({ message: "Admin Login successfull" , token,email, refreshToken,role:"Admin" ,status:true});
+     res.status(200).send({ message: "Admin Login successfull" ,userId, token, refreshToken,role:"Admin" ,status:true});
   } else {
     return res.send({ status: false, messege: "something went wrong" });
   }
       }
       else{
 
-           if (user  ) {
+      if (user  ) {
     let token = jwt.sign(
       { email: user.email,role:user.role},
       process.env.TOKEN_SECRET,
@@ -105,7 +105,7 @@ const Login = async (req, res) => {
         process.env.REFRESH_TOKEN,
       { expiresIn: "7 days" }
     );
-     res.status(200).send({ "Message": "Login successfull" , token,email, refreshToken ,role:"User",status:true });
+     res.status(200).send({ "Message": "Login successfull" ,userId:userId, token,email, refreshToken ,role:"User",status:true });
   } else {
     return res.send({ status: false, messege: "something went wrong" });
   }
