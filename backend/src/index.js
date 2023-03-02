@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const connect = require('./config/connect');
 const app = express();
@@ -6,7 +7,6 @@ const router = require('./routes/userRoute');
 const productRoute = require("./routes/productRoute")
 const cartRoute = require("./routes/cartRoute")
 const paymentRoute =  require("./routes/paymentRoute")
-require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors({origin:true,credentials:true}))
